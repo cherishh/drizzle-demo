@@ -25,25 +25,29 @@ async function seedFeedback() {
 
 async function seedBooks() {
   try {
-    await db.insert(books).values([
-      {
-        title: '三国演义',
-        isbn: '9787020008728',
-        publishYear: 1522,
-        publisher: '人民文学出版社',
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      },
-      {
-        title: '红楼梦',
-        isbn: '9787020002207',
-        publishYear: 1791,
-        publisher: '人民文学出版社',
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      },
-    ]);
+    const insertedBooks = await db
+      .insert(books)
+      .values([
+        {
+          title: '三国演义',
+          isbn: '9787020008728',
+          publishYear: 1522,
+          publisher: '人民文学出版社',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          title: '红楼梦',
+          isbn: '9787020002207',
+          publishYear: 1791,
+          publisher: '人民文学出版社',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+      ])
+      .returning(); // 返回插入的数据
     console.log('✅ Books 数据填充成功');
+    return insertedBooks;
   } catch (error) {
     console.error('❌ Books 数据填充失败:', error);
     throw error;
@@ -51,13 +55,54 @@ async function seedBooks() {
 }
 
 async function seedAuthors() {
-  // 填充 authors 表
+  try {
+    const insertedAuthors = await db
+      .insert(authors)
+      .values([
+        {
+          name: '罗贯中',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: '曹雪芹',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+      ])
+      .returning(); // 返回插入的数据
+    console.log('✅ Authors 数据填充成功');
+    return insertedAuthors;
+  } catch (error) {
+    console.error('❌ Authors 数据填充失败:', error);
+    throw error;
+  }
+}
+
+async function seedBooksToAuthors(books: any[], authors: any[]) {
+  try {
+    await db.insert(booksToAuthors).values([
+      {
+        bookId: books[0].id, // 使用实际插入的 ID
+        authorId: authors[0].id,
+        createdAt: new Date(),
+      },
+      {
+        bookId: books[1].id,
+        authorId: authors[1].id,
+        createdAt: new Date(),
+      },
+    ]);
+    console.log('✅ BooksToAuthors 关系数据填充成功');
+  } catch (error) {
+    console.error('❌ BooksToAuthors 关系数据填充失败:', error);
+    throw error;
+  }
 }
 
 // 主 seed 函数
 async function seed() {
   try {
-    // 可以控制是否清空表
     if (process.env.RESET_DB === 'true') {
       console.log('🗑️ 清空所有表...');
       await db.delete(booksToAuthors);
@@ -66,19 +111,13 @@ async function seed() {
       await db.delete(authors);
     }
 
-    // 定义所有 seed 函数
-    const seedFunctions = [
-      { name: 'Feedback', fn: seedFeedback },
-      { name: 'Books', fn: seedBooks },
-      { name: 'Authors', fn: seedAuthors },
-      // 将来可以在这里添加更多表的 seed 函数
-    ];
+    // 先填充基础数据并保存返回值
+    await seedFeedback();
+    const insertedBooks = await seedBooks();
+    const insertedAuthors = await seedAuthors();
 
-    // 执行所有 seed 函数
-    for (const { name, fn } of seedFunctions) {
-      console.log(`🌱 开始填充 ${name} 数据...`);
-      await fn();
-    }
+    // 使用实际的 ID 填充关系表
+    await seedBooksToAuthors(insertedBooks, insertedAuthors);
 
     console.log('✨ 所有数据填充完成！');
   } catch (error) {

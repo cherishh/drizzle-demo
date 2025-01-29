@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "db:push": "drizzle-kit push",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx lib/db/migrate.ts",
     "db:seed": "tsx lib/db/seed.ts",
@@ -37,6 +38,7 @@
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.13.7",
     "@eslint/eslintrc": "^3",
+    "@flydotio/dockerfile": "^0.7.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
