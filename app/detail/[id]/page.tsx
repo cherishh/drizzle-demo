@@ -1,5 +1,10 @@
-export default async function BookDetail({ params }: { params: { id: string } }) {
-  const { id } = await params;
+'use client';
+import { use } from 'react';
+
+type Params = Promise<{ id: string }>;
+
+export default function BookDetail({ params }: { params: Params }) {
+  const { id } = use(params);
 
   return (
     <div>
