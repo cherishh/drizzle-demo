@@ -13,7 +13,7 @@ type initialState = {
 export type FeedbackState = initialState;
 
 export async function submitFeedback(prevState: FeedbackState, formData: FormData) {
-  'use server';
+  // 这里不需要再 use server, 单独 file 中顶层使用 use server，下面所有 export async function 均自动成为 server actions
   const content = formData.get('content')?.toString() || '';
   const email = formData.get('email')?.toString() || '';
 
