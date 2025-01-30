@@ -1,6 +1,10 @@
-import type { NextConfig } from 'next';
+// @ts-check
+import withPlaiceholder from '@plaiceholder/next';
 
-const nextConfig: NextConfig = {
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
   // 配置输出模式为 standalone
   output: 'standalone',
   images: {
@@ -12,4 +16,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withPlaiceholder(nextConfig);
