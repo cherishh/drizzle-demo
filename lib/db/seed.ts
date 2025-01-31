@@ -1,3 +1,4 @@
+import type { InferSelectModel } from 'drizzle-orm';
 import { db } from '@/lib/db';
 import { feedback, books, authors, booksToAuthors } from '@/lib/db/schema';
 
@@ -79,7 +80,10 @@ async function seedAuthors() {
   }
 }
 
-async function seedBooksToAuthors(books: any[], authors: any[]) {
+type Book = InferSelectModel<typeof books>;
+type Author = InferSelectModel<typeof authors>;
+
+async function seedBooksToAuthors(books: Book[], authors: Author[]) {
   try {
     await db.insert(booksToAuthors).values([
       {
