@@ -1,3 +1,4 @@
+import MillionLint from '@million/lint';
 // @ts-check
 import withPlaiceholder from '@plaiceholder/next';
 
@@ -16,4 +17,7 @@ const nextConfig = {
   },
 };
 
-export default withPlaiceholder(nextConfig);
+export default MillionLint.next({
+  enabled: true,
+  rsc: true
+})(withPlaiceholder(nextConfig));
