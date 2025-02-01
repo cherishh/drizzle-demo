@@ -1,4 +1,3 @@
-import MillionLint from '@million/lint';
 // @ts-check
 import withPlaiceholder from '@plaiceholder/next';
 
@@ -7,7 +6,7 @@ import withPlaiceholder from '@plaiceholder/next';
  */
 const nextConfig = {
   // 配置输出模式为 standalone
-  output: 'standalone',
+  // output: 'standalone',
   images: {
     remotePatterns: [
       {
@@ -17,7 +16,4 @@ const nextConfig = {
   },
 };
 
-export default MillionLint.next({
-  enabled: true,
-  rsc: true
-})(withPlaiceholder(nextConfig));
+export default withPlaiceholder(nextConfig);

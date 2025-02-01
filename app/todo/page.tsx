@@ -1,5 +1,11 @@
+'use client';
+
 function Todo() {
-  return <div>Todo</div>;
+  return (
+    <div>
+      <div>Todo</div>
+    </div>
+  );
 }
 
 export default Todo;

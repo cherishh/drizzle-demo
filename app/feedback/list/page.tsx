@@ -2,6 +2,8 @@ import { Suspense } from 'react';
 import { db } from '@/lib/db';
 import { feedback } from '@/lib/db/schema';
 
+export const dynamic = 'force-dynamic';
+
 async function FeedbackList() {
   const feedbacks = await db.select().from(feedback);
 

@@ -1,9 +1,7 @@
 'use client';
 import { use } from 'react';
 
-type Params = Promise<{ id: string }>;
-
-export default function BookDetail({ params }: { params: Params }) {
+export default function BookDetail({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
 
   return (
