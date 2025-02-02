@@ -1,0 +1,25 @@
+{
+  "home": {
+    "title": "测试",
+    "feedback": "反馈",
+    "feedbackList": "反馈列表",
+    "detail": "详情",
+    "imageTest": "图片测试",
+    "todo": "待办事项"
+  },
+  "feedback": {
+    "list": {
+      "title": "反馈列表"
+    },
+    "title": "反馈",
+    "email": "邮箱",
+    "email_placeholder": "请输入您的邮箱",
+    "message": "消息",
+    "message_placeholder": "请输入您的反馈内容",
+    "submitting": "提交中...",
+    "submit": "提交"
+  },
+  "common": {
+    "selectLanguage": "选择语言"
+  }
+}

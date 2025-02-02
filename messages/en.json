@@ -1,0 +1,25 @@
+{
+  "home": {
+    "title": "Test",
+    "feedback": "Feedback",
+    "feedbackList": "Feedback List",
+    "detail": "Detail",
+    "imageTest": "Image Test",
+    "todo": "Todo App"
+  },
+  "feedback": {
+    "list": {
+      "title": "List"
+    },
+    "title": "Feedback",
+    "email": "Email",
+    "email_placeholder": "Please enter your email",
+    "message": "Message",
+    "message_placeholder": "Please enter your message",
+    "submitting": "Submitting...",
+    "submit": "Submit"
+  },
+  "common": {
+    "selectLanguage": "Language"
+  }
+}

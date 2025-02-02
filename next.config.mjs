@@ -1,12 +1,13 @@
 // @ts-check
 import withPlaiceholder from '@plaiceholder/next';
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin();
 
 /**
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  // 配置输出模式为 standalone
-  // output: 'standalone',
   images: {
     remotePatterns: [
       {
@@ -16,4 +17,4 @@ const nextConfig = {
   },
 };
 
-export default withPlaiceholder(nextConfig);
+export default withNextIntl(withPlaiceholder(nextConfig));
