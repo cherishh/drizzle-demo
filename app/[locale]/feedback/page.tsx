@@ -1,15 +1,14 @@
 'use client';
 
 import { useActionState } from 'react';
-import { submitFeedback } from './action';
+import { toast } from 'sonner';
+import { submitFeedback } from '../../actions/feedback/actions';
 import { useTranslations } from 'next-intl';
 // 初始状态
 const initialState = {
   error: '',
   success: false,
 };
-
-// 客户端组件
 export default function FeedbackPage() {
   const t = useTranslations('feedback');
   const [state, formAction, pending] = useActionState(
@@ -27,6 +26,10 @@ export default function FeedbackPage() {
         {pending ? t('submitting') : t('submit')}
       </button>
     );
+  }
+
+  if (state.success) {
+    toast('success.');
   }
 
   return (

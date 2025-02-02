@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { db } from '@/lib/db';
 import { feedback } from '@/lib/db/schema';
 import { useTranslations } from 'next-intl';
+import { LikeButton } from '@/components/feature/like-button';
 
 export const dynamic = 'force-dynamic';
 
@@ -14,6 +15,9 @@ async function FeedbackList() {
         <li key={feedback.id} className='rounded bg-white p-4 shadow'>
           <div className='mb-2 text-sm text-gray-500'>{feedback.email}</div>
           <div className='text-gray-700'>{feedback.content}</div>
+          <div className='text-gray-500'>
+            <LikeButton id={feedback.id} likes={feedback.likes} />
+          </div>
         </li>
       ))}
     </ul>
