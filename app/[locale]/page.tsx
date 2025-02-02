@@ -17,7 +17,7 @@ export default function Home() {
         </div>
       </header>
       <br />
-      <div className='flex flex-row items-center justify-center gap-4'>
+      <nav className='flex flex-row items-center justify-center gap-4'>
         <Link href='/feedback'>{t('feedback')}</Link>
         <Link href='/feedback/list'>{t('feedbackList')}</Link>
         <Link prefetch={false} href='/detail'>
@@ -28,7 +28,8 @@ export default function Home() {
         </Link>
         <Link href='/image-test'>{t('imageTest')}</Link>
         <Link href='/todo'>{t('todo')}</Link>
-      </div>
+        <Link href='/about'>{t('about')}</Link>
+      </nav>
     </div>
   );
 }

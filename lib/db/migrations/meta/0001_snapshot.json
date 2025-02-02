@@ -1,6 +1,6 @@
 {
-  "id": "99a6cc25-7058-40bb-b71a-722d96ff84d4",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "e6b8f592-985d-4d77-89d8-43b8dd4631aa",
+  "prevId": "99a6cc25-7058-40bb-b71a-722d96ff84d4",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -209,6 +209,13 @@
           "type": "text",
           "primaryKey": false,
           "notNull": true
+        },
+        "likes": {
+          "name": "likes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
         },
         "created_at": {
           "name": "created_at",

@@ -5,7 +5,8 @@
     "feedbackList": "反馈列表",
     "detail": "详情",
     "imageTest": "图片测试",
-    "todo": "待办事项"
+    "todo": "待办事项",
+    "about": "关于我"
   },
   "feedback": {
     "list": {
@@ -21,5 +22,8 @@
   },
   "common": {
     "selectLanguage": "选择语言"
+  },
+  "About": {
+    "title": "关于我"
   }
 }

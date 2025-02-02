@@ -5,7 +5,8 @@
     "feedbackList": "Feedback List",
     "detail": "Detail",
     "imageTest": "Image Test",
-    "todo": "Todo App"
+    "todo": "Todo App",
+    "about": "About"
   },
   "feedback": {
     "list": {
@@ -21,5 +22,8 @@
   },
   "common": {
     "selectLanguage": "Language"
+  },
+  "About": {
+    "title": "About Me"
   }
 }

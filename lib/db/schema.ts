@@ -1,12 +1,23 @@
 import { relations } from 'drizzle-orm';
-import { pgTable, serial, varchar, timestamp, integer, decimal, primaryKey, text } from 'drizzle-orm/pg-core';
+import {
+  pgTable,
+  serial,
+  varchar,
+  timestamp,
+  integer,
+  decimal,
+  primaryKey,
+  text,
+} from 'drizzle-orm/pg-core';
 
 // 作者表
 export const authors = pgTable('authors', {
   id: serial('id').primaryKey(),
   name: varchar('name', { length: 255 }).notNull(),
   livingCity: varchar('living_city', { length: 255 }),
-  averageRating: decimal('average_rating', { precision: 3, scale: 2 }).default('0.00'),
+  averageRating: decimal('average_rating', { precision: 3, scale: 2 }).default(
+    '0.00'
+  ),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 });
@@ -34,7 +45,7 @@ export const booksToAuthors = pgTable(
       .notNull(),
     createdAt: timestamp('created_at').defaultNow().notNull(),
   },
-  table => ({
+  (table) => ({
     pk: primaryKey(table.bookId, table.authorId),
   })
 );
@@ -44,6 +55,7 @@ export const feedback = pgTable('feedback', {
   id: serial('id').primaryKey(),
   email: varchar('email', { length: 255 }).notNull(),
   content: text('content').notNull(),
+  likes: integer('likes').default(0).notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
 
