@@ -1,8 +1,9 @@
 // import { getBlog } from '@/lib/blog';
 
 // todo: will this be pre-built?
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-async function BlogPage({ params }: { params: { slug: string } }) {
+async function BlogPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  console.log('slug', slug);
   // const { title, content } = await getBlog(params.slug);
 
   return (
