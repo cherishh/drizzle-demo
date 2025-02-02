@@ -39,7 +39,12 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+          <ThemeProvider
+            attribute='class'
+            defaultTheme='system'
+            enableSystem
+            disableTransitionOnChange // 如果不禁止，在 dark 模式下刷新会有一个从白到黑的flash
+          >
             {children}
           </ThemeProvider>
         </NextIntlClientProvider>
