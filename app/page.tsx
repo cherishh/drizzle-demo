@@ -5,13 +5,15 @@ import { ModeToggle } from '@/components/shared/toggle-theme';
 
 export default function Home() {
   return (
-    <div className='text-center m-4'>
-      <h1>Test</h1>
-      <div className='flex flex-row gap-4 justify-end items-center'>
-        <ModeToggle />
-      </div>
+    <div className='m-4 text-center'>
+      <header className='flex flex-row items-center justify-end gap-4'>
+        <h1 className='flex-grow text-2xl font-bold'>Test</h1>
+        <div>
+          <ModeToggle />
+        </div>
+      </header>
       <br />
-      <div className='flex flex-row gap-4 justify-center items-center'>
+      <div className='flex flex-row items-center justify-center gap-4'>
         <Link href='/feedback'>Feedback</Link>
         <Link href='/feedback/list'>Feedback List</Link>
         <Link prefetch={false} href='/detail'>
