@@ -12,6 +12,10 @@
     "list": {
       "title": "反馈列表"
     },
+    "validation": {
+      "email": "请输入有效的邮箱地址",
+      "message": "请输入反馈内容"
+    },
     "title": "反馈",
     "email": "邮箱",
     "email_placeholder": "请输入您的邮箱",
@@ -21,7 +25,11 @@
     "submit": "提交"
   },
   "common": {
-    "selectLanguage": "选择语言"
+    "selectLanguage": "选择语言",
+    "title": "我的应用",
+    "nav": {
+      "home": "首页"
+    }
   },
   "About": {
     "title": "关于我"

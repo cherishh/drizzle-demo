@@ -12,6 +12,10 @@
     "list": {
       "title": "List"
     },
+    "validation": {
+      "email": "Please enter a valid email address",
+      "message": "Please enter a message"
+    },
     "title": "Feedback",
     "email": "Email",
     "email_placeholder": "Please enter your email",
@@ -21,7 +25,11 @@
     "submit": "Submit"
   },
   "common": {
-    "selectLanguage": "Language"
+    "selectLanguage": "Language",
+    "title": "My App",
+    "nav": {
+      "home": "Home"
+    }
   },
   "About": {
     "title": "About Me"
