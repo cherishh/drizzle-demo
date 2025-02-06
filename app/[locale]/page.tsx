@@ -21,6 +21,7 @@ export default function Home() {
         <Link href='/image-test'>{t('imageTest')}</Link>
         <Link href='/todo'>{t('todo')}</Link>
         <Link href='/about'>{t('about')}</Link>
+        <Link href='/dashboard'>dashboard</Link>
       </nav>
     </div>
   );

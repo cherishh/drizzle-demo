@@ -23,7 +23,7 @@ export function LocaleSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant='ghost' size='icon'>
-          <Languages className='h-5 w-5' />
+          <Languages className='h-[1.2rem] w-[1.2rem]' />
           <span className='sr-only'>{t('selectLanguage')}</span>
         </Button>
       </DropdownMenuTrigger>
