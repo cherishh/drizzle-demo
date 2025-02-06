@@ -3,7 +3,14 @@
 import { useTranslations } from 'next-intl';
 import { ModeToggle } from '@/components/shared/toggle-theme';
 import { LocaleSwitcher } from '@/components/shared/locale-switcher';
-import { Link } from '@/i18n/routing';
+import Link from 'next/link';
+import {
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs';
 import Image from 'next/image';
 import logo from '@/public/vercel.svg';
 
@@ -21,6 +28,13 @@ export function Header() {
         <div className='flex flex-row items-center gap-2'>
           <ModeToggle />
           <LocaleSwitcher />
+          <SignedOut>
+            <SignInButton />
+            <SignUpButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </div>
       </header>
       <br />

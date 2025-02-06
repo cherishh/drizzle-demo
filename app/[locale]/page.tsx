@@ -1,7 +1,8 @@
 'use client';
 
-import { Link } from '@/i18n/routing';
-
+// 不能使用 i18n 的 routing 否则clerk的保护失效
+// import { Link } from '@/i18n/routing';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 export default function Home() {

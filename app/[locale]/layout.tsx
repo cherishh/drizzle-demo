@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
+import { ClerkProvider } from '@clerk/nextjs';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -35,22 +36,24 @@ export default async function RootLayout({
   if (!routing.locales.includes(locale as any)) notFound();
 
   return (
-    <html lang={locale}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <NextIntlClientProvider messages={messages}>
+    <ClerkProvider>
+      <html lang={locale}>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
           <ThemeProvider
             attribute='class'
             defaultTheme='system'
             enableSystem
             disableTransitionOnChange // 如果不禁止，在 dark 模式下刷新会有一个从白到黑的flash
           >
-            <Header />
-            {children}
+            <NextIntlClientProvider messages={messages}>
+              <Header />
+              {children}
+            </NextIntlClientProvider>
           </ThemeProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
