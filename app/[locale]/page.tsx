@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 export default function Home() {
   const t = useTranslations('home');
   return (
-    <div>
+    <div className='flex h-full flex-col'>
       <nav className='flex flex-row items-center justify-center gap-4'>
         <Link href='/feedback'>{t('feedback')}</Link>
         <Link href='/feedback/list'>{t('feedbackList')}</Link>
@@ -24,6 +24,12 @@ export default function Home() {
         <Link href='/about'>{t('about')}</Link>
         <Link href='/dashboard'>dashboard</Link>
       </nav>
+      <div className='flex-1'>hero todo</div>
+      <footer className='flex flex-row items-center justify-center gap-2 text-sm'>
+        <Link href='/term-of-service'>Term Of Service</Link>
+        <span className='text-muted-foreground'>·</span>
+        <Link href='/privacy'>Privacy Policy</Link>
+      </footer>
     </div>
   );
 }

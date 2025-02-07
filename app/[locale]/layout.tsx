@@ -37,9 +37,9 @@ export default async function RootLayout({
 
   return (
     <ClerkProvider>
-      <html lang={locale}>
+      <html lang={locale} className='h-full'>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} flex h-full flex-col antialiased`}
         >
           <ThemeProvider
             attribute='class'
