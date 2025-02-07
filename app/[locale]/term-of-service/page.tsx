@@ -4,12 +4,13 @@ export default function TermOfService() {
       <h1>Terms of Service</h1>
 
       <p>
-        <strong>Effective Date:</strong> [Insert Effective Date Here]
+        <strong>Effective Date:</strong> February 06, 2025
       </p>
 
       <p>
         <strong>
-          Welcome to <a href='https://tuxihub.com'>Tuxihub.com</a> and My App!
+          Welcome to <a href='https://tuxihub.com'>Tuxihub.com</a> and My App -
+          Your Dream Canvas!
         </strong>
       </p>
 
@@ -28,143 +29,251 @@ export default function TermOfService() {
         <strong>
           By accessing or using the Platform, including but not limited to
           browsing the website, downloading the application, registering an
-          account, uploading content, subscribing to services, etc., you
-          acknowledge that you have read, understood, and agree to be bound by
-          these Terms. If you do not agree to any part of these Terms, please do
-          not use the Platform.
+          account, generating dream images, sharing images, commenting,
+          subscribing to services, etc., you acknowledge that you have read,
+          understood, and agree to be bound by these Terms. If you do not agree
+          to any part of these Terms, please do not use the Platform.
         </strong>
       </p>
 
-      <h2>1. Description of Service</h2>
+      <h2>1. Description of Service: Dream Image Generation and Sharing</h2>
       <p>
-        <a href='https://tuxihub.com'>Tuxihub.com</a> and My App (hereinafter
-        referred to as the “<strong>Platform</strong>”) is a [Briefly describe
-        the service your platform provides, e.g., social platform, content
-        sharing platform, online tool, etc.].
+        The Platform, "My App" and tuxihub.com, provides a service that allows
+        users to generate unique images based on their described dreams using
+        artificial intelligence. Users can then share these AI-generated dream
+        images with the Platform community, and interact with other users' dream
+        images through likes and comments.
       </p>
 
       <h2>2. Account Registration and Use</h2>
       <ul>
         <li>
-          <strong>Account Creation:</strong> To use certain features of the
-          Platform, you may need to register an account. You will need to
-          provide accurate, complete, and up-to-date information.
+          <strong>Account Creation:</strong> To fully utilize the Platform, you
+          may need to register an account. You must provide accurate, complete,
+          and up-to-date information during registration and keep this
+          information current.
         </li>
         <li>
           <strong>Account Security:</strong> You are responsible for maintaining
-          the confidentiality of your account and password and for all
-          activities that occur under your account. Please notify us immediately
-          of any unauthorized use of your account.
+          the confidentiality of your account credentials and for all activities
+          that occur under your account. Notify us immediately of any
+          unauthorized access or suspected security breaches.
         </li>
         <li>
           <strong>Account Eligibility:</strong> You must be at least [Insert
           your minimum age requirement here, e.g., 18 years old] to register and
-          use the Platform. By registering an account, you warrant that you have
-          reached that age and have full civil capacity.
+          use the Platform. By registering, you represent and warrant that you
+          meet this age requirement and have the legal capacity to enter into
+          this agreement.
         </li>
         <li>
-          <strong>Account Termination:</strong> We reserve the right, at any
-          time, for any reason or no reason, in our sole discretion, to
-          terminate or suspend your account without prior notice, including but
-          not limited to conduct that violates these Terms.
+          <strong>Account Termination:</strong> We reserve the right to suspend
+          or terminate your account at any time, with or without cause, and
+          without prior notice, for conduct that violates these Terms or for any
+          other reason at our sole discretion.
         </li>
       </ul>
 
-      <h2>3. User Content</h2>
+      <h2>3. User Content: Dream Images and Comments</h2>
       <ul>
         <li>
-          <strong>Ownership of User Content:</strong> You retain ownership of
-          any content you create, upload, post, or otherwise make available on
-          the Platform (including but not limited to text, images, videos,
-          audio, etc., hereinafter referred to as “<strong>User Content</strong>
-          ”).
+          <strong>User Input and Generated Images:</strong> You are responsible
+          for the dream descriptions ("Prompts") you provide to the Platform.
+          The Platform will generate images based on these Prompts.
         </li>
         <li>
-          <strong>License to User Content:</strong> By posting User Content on
-          the Platform, you grant us a non-exclusive, worldwide, royalty-free,
-          transferable, sub-licensable license to use, copy, modify, adapt,
-          publish, translate, distribute, and display your User Content on the
-          Platform and in related promotional channels.
+          <strong>Sharing User Content:</strong> By posting dream images and
+          comments on the Platform, you grant other users a non-exclusive
+          license to view and interact with your content within the Platform.
         </li>
         <li>
-          <strong>Responsibility for User Content:</strong> You are solely
-          responsible for your User Content and warrant that:
+          <strong>Content Guidelines:</strong> You agree not to post content
+          that is:
           <ul>
             <li>
-              You have the right to post the User Content and that the content
-              does not infringe upon the rights of any third party, including
-              but not limited to intellectual property rights, privacy rights,
-              portrait rights, etc.
+              Unlawful, harmful, threatening, abusive, harassing, defamatory,
+              libelous, invasive of another's privacy, or racially, ethnically
+              or otherwise objectionable.
             </li>
             <li>
-              Your User Content is lawful, truthful, and accurate, and does not
-              contain any defamatory, obscene, pornographic, threatening,
-              harassing, inciting violence, infringing privacy, or other
-              unlawful or objectionable content.
+              Hate speech or promotes discrimination based on race, ethnicity,
+              religion, gender, sexual orientation, disability, or any other
+              protected characteristic.
+            </li>
+            <li>Pornographic or sexually suggestive.</li>
+            <li>
+              Infringes upon or violates any intellectual property rights or
+              other rights of any third party.
+            </li>
+            <li>
+              Spam, unsolicited advertising, or unauthorized promotional
+              materials.
+            </li>
+            <li>Contains viruses, malware, or any other harmful code.</li>
+            <li>Misleading or fraudulent.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Content Moderation:</strong> While we do not actively
+          pre-screen all User Content, we reserve the right (but not the
+          obligation) to monitor, review, remove, or edit User Content that
+          violates these Terms or is otherwise objectionable. We may utilize
+          automated tools and/or manual review for content moderation. Users may
+          also report content that they believe violates these Terms through
+          mechanisms provided on the Platform.
+        </li>
+      </ul>
+
+      <h2>4. Subscription Services and Image Generation Limits</h2>
+      <ul>
+        <li>
+          <strong>Subscription Plans:</strong> We offer different subscription
+          tiers with varying image generation limits:
+          <ul>
+            <li>
+              <strong>Free Tier:</strong> Limited to 5 image generations per
+              day.
+            </li>
+            <li>
+              <strong>Plus Tier:</strong> Limited to 20 image generations per
+              day.
+            </li>
+            <li>
+              <strong>Pro Tier:</strong> Unlimited image generations per day.
+            </li>
+          </ul>
+          These generation limits are subject to change at our discretion.
+        </li>
+        <li>
+          <strong>Subscription Fees and Billing:</strong> Subscription fees are
+          charged on a monthly basis. Payment methods accepted will be specified
+          on the Platform. All fees are non-refundable except as expressly
+          stated in our Refund Policy below or as required by applicable law.
+        </li>
+        <li>
+          <strong>Subscription Refund and Cancellation:</strong>
+          <ul>
+            <li>
+              <strong>Refund Policy:</strong> We offer a 7-day refund period
+              from the date of your initial subscription purchase. If you are
+              not satisfied with the service within the first 7 days, you may
+              request a full refund. No refunds will be issued after the 7-day
+              period.
+            </li>
+            <li>
+              <strong>Cancellation:</strong> You may cancel your subscription at
+              any time through your account settings. Upon cancellation, your
+              subscription benefits will continue until the end of your current
+              billing cycle, after which your access will revert to the Free
+              Tier (or be terminated if you do not have a Free Tier account).
             </li>
           </ul>
         </li>
         <li>
-          <strong>Content Moderation:</strong> We have the right (but not the
-          obligation) to review, monitor, remove, or edit User Content to ensure
-          it complies with these Terms and applicable laws and regulations.
+          <strong>Price Adjustments:</strong> We reserve the right to modify
+          subscription fees at any time. We will provide reasonable prior notice
+          of any price changes, which will be effective at the start of your
+          next billing cycle.
         </li>
       </ul>
 
-      <h2>4. Subscription Services</h2>
+      <h2>5. Intellectual Property: Platform and User-Generated Images</h2>
       <ul>
         <li>
-          <strong>Subscription Plans:</strong> We offer [Describe your
-          subscription plan types and main features, e.g., different tiers of
-          membership subscriptions, unlocking premium features, etc.]
-          subscription plans. Subscription prices and specific terms will be
-          clearly communicated to you when you subscribe.
+          <strong>Platform Content Ownership:</strong> The Platform and all
+          Platform Content, including but not limited to software, algorithms,
+          designs, text, graphics, logos, and underlying AI models (excluding
+          User Content), are owned by us or our licensors and are protected by
+          copyright, trademark, and other intellectual property laws.
         </li>
         <li>
-          <strong>Subscription Fees and Payment:</strong> Subscription fees are
-          payable according to the payment methods specified on the Platform.
-          All fees are non-refundable unless otherwise required by law.
+          <strong>Trademarks:</strong> “My App,” “tuxihub.com,” and associated
+          logos are our trademarks and service marks. You may not use these
+          marks without our express written permission.
         </li>
         <li>
-          <strong>Subscription Renewal and Cancellation:</strong> Subscriptions
-          will automatically renew unless you cancel your subscription before
-          the renewal date. You can manage and cancel your subscriptions in your
-          account settings.
-        </li>
-        <li>
-          <strong>Price Adjustments:</strong> We reserve the right to adjust
-          subscription prices at any time, but will notify you reasonably in
-          advance. Price adjustments will take effect in the next subscription
-          cycle.
-        </li>
-      </ul>
-
-      <h2>5. Intellectual Property</h2>
-      <ul>
-        <li>
-          <strong>Ownership of Platform Content:</strong> The Platform and its
-          content, including but not limited to text, graphics, images, logos,
-          software, audio and video materials (hereinafter referred to as “
-          <strong>Platform Content</strong>”), are owned by us or our licensors
-          and are protected by copyright, trademark, and other intellectual
-          property laws.
-        </li>
-        <li>
-          <strong>Trademarks:</strong> “My App” and “tuxihub.com,” and all
-          related logos are our trademarks and may not be used without our prior
-          written permission.
-        </li>
-        <li>
-          <strong>Limited License:</strong> We grant you a limited,
+          <strong>License to Use Platform:</strong> We grant you a limited,
           non-exclusive, non-transferable, revocable license to access and use
-          the Platform and Platform Content solely for personal and
-          non-commercial purposes, and in accordance with these Terms.
+          the Platform for your personal, non-commercial enjoyment of the dream
+          image generation and sharing services, subject to these Terms.
         </li>
         <li>
-          <strong>Prohibited Conduct:</strong> Without our prior written
-          permission, you may not copy, modify, adapt, distribute, sell, rent,
-          publicly display, publicly perform, transmit, broadcast, or otherwise
-          exploit the Platform Content in any way.
+          <strong>
+            Generated Image Copyright and Usage: [IMPORTANT - LEGAL REVIEW
+            REQUIRED]
+          </strong>
+          <p>
+            <strong>
+              [Option 1 - Platform Ownership, Broad User License (Consider Legal
+              Soundness)]
+            </strong>{' '}
+            We intend to own the copyright to all images generated by users on
+            the Platform. However, we grant all users a broad, non-exclusive,
+            worldwide, perpetual license to use, reproduce, modify, and
+            distribute images generated on the Platform, even for commercial
+            purposes, without attribution or further permission.{' '}
+            <strong>
+              [Legal Review Needed: Confirm legality and enforceability of
+              platform ownership and this license.]
+            </strong>
+          </p>
+          <p>
+            <strong>
+              [Option 2 - Platform License for Operation, User License for
+              Personal Use (More Standard)]
+            </strong>{' '}
+            You retain ownership of the prompts you provide. Images generated by
+            the Platform in response to your prompts are considered Platform
+            Content, and we retain ownership of these generated images. We grant
+            you a non-exclusive, personal, non-commercial license to use,
+            display, and share the images you generate on the Platform for your
+            personal enjoyment and within the Platform's intended functionality.
+            For any commercial or broader usage beyond personal enjoyment and
+            Platform sharing, please contact us for licensing options.{' '}
+            <strong>
+              [Legal Review Needed: Define scope of "personal, non-commercial
+              use" clearly.]
+            </strong>
+          </p>
+          <p>
+            <strong>
+              [Choose ONE of the above options and consult with legal counsel to
+              determine the most appropriate and legally sound approach for your
+              platform and user expectations.]
+            </strong>
+          </p>
+        </li>
+        <li>
+          <strong>User Content License to Platform:</strong> To operate the
+          Platform and provide the dream image generation and sharing services,
+          you grant us a non-exclusive, royalty-free, worldwide license to use,
+          host, store, reproduce, modify, adapt, publish, translate, distribute,
+          and display your User Content (including prompts and generated images)
+          on the Platform and in connection with operating and promoting the
+          Platform. This license is necessary for us to provide the services and
+          is not intended to claim ownership of your creative input or generated
+          images beyond the terms described above in "Generated Image Copyright
+          and Usage."
+        </li>
+        <li>
+          <strong>DMCA/Copyright Infringement Policy:</strong> We respect the
+          intellectual property rights of others and expect our users to do the
+          same. We will respond to clear notices of alleged copyright
+          infringement that comply with applicable law, including the Digital
+          Millennium Copyright Act (DMCA). If you believe that your copyrighted
+          work has been used in a way that constitutes copyright infringement
+          and is accessible on the Platform, please notify our designated DMCA
+          agent at [Insert Designated DMCA Agent Email Address or Contact Info].
+          Your notice should include: (a) identification of the copyrighted work
+          claimed to have been infringed; (b) identification of the material
+          that is claimed to be infringing; (c) information reasonably
+          sufficient to permit us to locate the infringing material; (d) your
+          contact information; (e) a statement that you have a good faith belief
+          that use of the material in the manner complained of is not authorized
+          by the copyright owner, its agent, or the law; and (f) a statement,
+          made under penalty of perjury, that the information in the
+          notification is accurate and that you are the copyright owner or are
+          authorized to act on behalf of the owner.
         </li>
       </ul>
 
@@ -181,12 +290,12 @@ export default function TermOfService() {
 
       <h2>7. Promotions, Contests, and Sweepstakes</h2>
       <p>
-        We may from time to time conduct promotions, contests, or sweepstakes on
-        the Platform (hereinafter referred to as “<strong>Promotions</strong>”).
-        These Promotions may be subject to additional rules and terms, which we
-        will make available to you prior to your participation. Your
-        participation in any Promotion is subject to the relevant rules and
-        terms.
+        We may occasionally offer promotions, contests, or sweepstakes
+        (collectively, “<strong>Promotions</strong>”) on the Platform. These
+        Promotions may have additional rules and eligibility requirements, which
+        will be made available to you at the time of the Promotion. Your
+        participation in any Promotion is subject to those additional rules and
+        these Terms.
       </p>
 
       <h2>8. Disclaimer of Warranties</h2>
@@ -194,106 +303,100 @@ export default function TermOfService() {
         <strong>
           The Platform and Platform Content are provided on an “AS IS” and “AS
           AVAILABLE” basis without any warranties of any kind, either express or
-          implied, including but not limited to warranties of merchantability,
-          fitness for a particular purpose, title, and non-infringement.
+          implied. To the fullest extent permitted by applicable law, we
+          disclaim all warranties, including but not limited to warranties of
+          merchantability, fitness for a particular purpose, title,
+          non-infringement, and accuracy of AI-generated images.
         </strong>
       </p>
 
       <p>
-        <strong>
-          To the fullest extent permitted by applicable law, we do not warrant
-          that:
-        </strong>
+        <strong>We do not warrant that:</strong>
       </p>
       <ul>
         <li>
-          The Platform will operate uninterrupted, securely, or error-free.
+          The Platform will be uninterrupted, error-free, secure, or available
+          at any particular time or location.
         </li>
         <li>
-          The results obtained from using the Platform will be accurate or
-          reliable.
+          The results obtained from using the Platform, including generated
+          images, will be accurate, reliable, or meet your expectations or
+          artistic tastes.
         </li>
-        <li>
-          The quality of any products, services, information, or other material
-          purchased or obtained by you through the Platform will meet your
-          expectations.
-        </li>
-        <li>Any errors in the Platform will be corrected.</li>
+        <li>Any defects or errors in the Platform will be corrected.</li>
+        <li>The Platform is free of viruses or other harmful components.</li>
       </ul>
 
       <p>
         <strong>
-          You expressly understand and agree that your use of the Platform and
-          Platform Content is at your sole risk.
+          Your use of the Platform and reliance on any Platform Content is
+          solely at your own risk.
         </strong>
       </p>
 
       <h2>9. Limitation of Liability</h2>
       <p>
         <strong>
-          To the fullest extent permitted by applicable law, we shall not be
-          liable for any direct, indirect, incidental, special, consequential,
-          or punitive damages arising out of or in connection with your use or
-          inability to use the Platform or Platform Content, including but not
-          limited to loss of profits, loss of data, business interruption, or
-          personal injury, whether such damages are based on contract, tort
-          (including negligence), strict liability, or other legal theory, even
-          if we have been advised of the possibility of such damages.
+          To the maximum extent permitted by applicable law, we shall not be
+          liable for any indirect, incidental, special, consequential, or
+          punitive damages, or any loss of profits or revenues, whether incurred
+          directly or indirectly, or any loss of data, use, goodwill, or other
+          intangible losses, resulting from (a) your access to or use of or
+          inability to access or use the platform; (b) any conduct or content of
+          any third party on the platform; (c) any content obtained from the
+          platform; or (d) unauthorized access, use or alteration of your
+          transmissions or content, even if we have been advised of the
+          possibility of such damages.
         </strong>
       </p>
 
       <p>
         <strong>
           In no event shall our aggregate liability to you for all claims
-          arising out of or relating to these Terms or the Platform, regardless
-          of the cause of action or form of claim, exceed the amount you have
-          paid to us, if any, in the [Insert time period here, e.g., twelve (12)
-          months] months prior to the event giving rise to the claim.
+          relating to the Platform exceed the amount you paid to us, if any,
+          during the twelve (12) months prior to the event giving rise to the
+          liability.
         </strong>
       </p>
-
       <p>
         <strong>
-          Some jurisdictions do not allow the exclusion or limitation of
-          liability for consequential or incidental damages, so the above
-          limitations or exclusions may not apply to you.
+          Some jurisdictions do not allow the exclusion or limitation of certain
+          liabilities, so some of the above exclusions and limitations may not
+          apply to you.
         </strong>
       </p>
 
       <h2>10. Indemnification</h2>
       <p>
-        You agree to indemnify, defend, and hold us harmless from and against
-        any and all claims, liabilities, damages, losses, and expenses
-        (including reasonable attorneys&apos; fees) arising out of or relating
-        to:
+        You agree to indemnify, defend, and hold harmless us and our officers,
+        directors, employees, and agents, from and against any and all claims,
+        liabilities, damages, losses, and expenses, including reasonable
+        attorneys' fees and costs, arising out of or in any way connected with
+        (a) your access to or use of the Platform; (b) your User Content; (c)
+        your breach or violation of these Terms; or (d) your infringement or
+        violation of any third-party rights.
       </p>
-      <ul>
-        <li>Your use of the Platform and Platform Content.</li>
-        <li>Your breach of these Terms.</li>
-        <li>Your User Content infringes any rights of any third party.</li>
-      </ul>
 
       <h2>11. Modifications to Terms</h2>
       <p>
-        We reserve the right to modify these Terms at any time. We will post the
-        updated Terms on the Platform and may notify you of significant changes
-        through other means (e.g., email). The modified Terms will be effective
-        upon posting or notification (whichever is earlier).{' '}
-        <strong>
-          Your continued use of the Platform after the modified Terms become
-          effective constitutes your acceptance of the modified Terms. If you do
-          not agree to the modified Terms, you must stop using the Platform.
-        </strong>
+        We reserve the right to modify these Terms at any time. We will notify
+        you of any material changes by posting the new Terms on the Platform
+        and/or through other reasonable means, such as email. The updated Terms
+        will be effective upon posting, unless otherwise specified. Your
+        continued use of the Platform after the effective date of the revised
+        Terms constitutes your acceptance of the changes. If you do not agree to
+        the modified Terms, you must discontinue your use of the Platform.
       </p>
 
       <h2>12. Termination</h2>
       <p>
         We may terminate your access to and use of the Platform at any time,
-        with or without cause, and without prior notice. You may also stop using
-        the Platform at any time. Certain provisions of these Terms, such as
-        Intellectual Property, Disclaimer of Warranties, Limitation of
-        Liability, Indemnification, and General Terms, shall survive termination
-        of these Terms.
+        with or without cause or notice. You may also terminate your account at
+        any time. Upon termination, your right to use the Platform will cease
+        immediately. Sections of these Terms that by their nature should survive
+        termination (including, but not limited to, Intellectual Property,
+        Disclaimer of Warranties, Limitation of Liability, Indemnification,
+        Governing Law and Dispute Resolution) will survive any termination.
       </p>
 
       <h2>13. Governing Law and Dispute Resolution</h2>
@@ -304,18 +407,21 @@ export default function TermOfService() {
           without regard to its conflict of law principles.
         </li>
         <li>
-          <strong>Dispute Resolution:</strong> Any dispute arising out of or
-          relating to these Terms or the Platform shall be resolved first
-          through amicable negotiation. If negotiation fails, it shall be
-          submitted to the competent courts in [Insert your preferred dispute
-          resolution location, e.g., San Francisco, California] for litigation.
+          <strong>Dispute Resolution:</strong> We encourage you to contact us
+          directly if you have any concerns or disputes. We will attempt to
+          resolve disputes informally. Any dispute arising out of or relating to
+          these Terms or the Platform that cannot be resolved informally shall
+          be resolved exclusively in the state or federal courts located in
+          [Insert your preferred dispute resolution location, e.g., San
+          Francisco County, California]. You consent to personal jurisdiction
+          and venue in these courts.
         </li>
       </ul>
 
       <h2>14. Contact Information</h2>
       <p>
-        If you have any questions or concerns about these Terms, please contact
-        us at:
+        For any questions or concerns regarding these Terms, please contact us
+        at:
       </p>
       <p>
         Email: <a href='mailto:wzx1991@gmail.com'>wzx1991@gmail.com</a>
@@ -323,21 +429,12 @@ export default function TermOfService() {
 
       <h2>15. Entire Agreement</h2>
       <p>
-        These Terms constitute the entire agreement between you and us regarding
-        the Platform and supersede all prior or contemporaneous communications
-        and proposals, whether oral or written, between you and us.
+        These Terms constitute the entire agreement between you and us
+        concerning the Platform and supersede all prior or contemporaneous
+        communications and proposals, whether oral or written, between you and
+        us.
       </p>
-
-      <p>[End of Agreement]</p>
-
-      <p>
-        <strong>
-          Again, please note that the above is a generic template for Terms of
-          Service. It is crucial to consult with legal professionals to review,
-          modify, and refine it based on your specific circumstances to ensure
-          its legal validity and that it adequately protects your interests.
-        </strong>
-      </p>
+      <hr />
     </div>
   );
 }
