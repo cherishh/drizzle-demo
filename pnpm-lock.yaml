@@ -77,6 +77,9 @@ importers:
       react-hook-form:
         specifier: ^7.54.2
         version: 7.54.2(react@19.0.0)
+      server-only:
+        specifier: ^0.0.1
+        version: 0.0.1
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
@@ -287,6 +290,12 @@ packages:
     peerDependenciesMeta:
       '@cloudflare/workers-types':
         optional: true
+
+  '@cloudflare/workerd-darwin-64@1.20250124.0':
+    resolution: {integrity: sha512-P5Z5KfVAuoCidIc0o2JPQZFLNTXDjtxN8vhtreCUr6V+xF5pqDNwQqeBDnDDF0gcszFQOYi2OZAB9e1MwssTwA==}
+    engines: {node: '>=16'}
+    cpu: [x64]
+    os: [darwin]
 
   '@cloudflare/workerd-windows-64@1.20250124.0':
     resolution: {integrity: sha512-5TunEy5x4pNUQ10Z47qP5iF6m3X9uB2ZScKDLkNaWtbQ7EcMCapOWzuynVkTKIMBgDeKw6DAB8nbbkybPyMS9w==}
@@ -5369,6 +5378,9 @@ snapshots:
       - supports-color
       - utf-8-validate
 
+  '@cloudflare/workerd-darwin-64@1.20250124.0':
+    optional: true
+
   '@cloudflare/workerd-windows-64@1.20250124.0':
     optional: true
 
@@ -9975,6 +9987,7 @@ snapshots:
 
   workerd@1.20250124.0:
     optionalDependencies:
+      '@cloudflare/workerd-darwin-64': 1.20250124.0
       '@cloudflare/workerd-windows-64': 1.20250124.0
 
   wrangler@3.105.1:

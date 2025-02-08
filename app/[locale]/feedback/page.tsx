@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useActionState } from 'react';
+import { useActionState, useEffect } from 'react';
 import { submitFeedback } from '../../actions/feedback/actions';
 import { Button } from '@/components/ui/button';
 import {
@@ -54,14 +54,18 @@ export default function FeedbackPage() {
       formData.append('email', data.email);
       formData.append('content', data.content);
       formAction(formData);
+      form.reset();
     });
   }
 
   const isLoading = pending || isPending;
 
-  if (state.success) {
-    toast('success.');
-  }
+  useEffect(() => {
+    if (state.success) {
+      state.success = false;
+      toast.success('success');
+    }
+  }, [state]);
 
   return (
     <div className='mx-auto max-w-2xl p-4'>
@@ -75,6 +79,7 @@ export default function FeedbackPage() {
         </div>
       )}
 
+      {/* 这里应该是有问题的。要么使用 useForm,要么使用原生 form+useActionState */}
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
           <FormField
