@@ -38,11 +38,11 @@ export default function TermOfService() {
 
       <h2>1. Description of Service: Dream Image Generation and Sharing</h2>
       <p>
-        The Platform, "My App" and tuxihub.com, provides a service that allows
-        users to generate unique images based on their described dreams using
-        artificial intelligence. Users can then share these AI-generated dream
-        images with the Platform community, and interact with other users' dream
-        images through likes and comments.
+        The Platform, &quot;My App&quot; and tuxihub.com, provides a service
+        that allows users to generate unique images based on their described
+        dreams using artificial intelligence. Users can then share these
+        AI-generated dream images with the Platform community, and interact with
+        other users&apos; dream images through likes and comments.
       </p>
 
       <h2>2. Account Registration and Use</h2>
@@ -78,8 +78,8 @@ export default function TermOfService() {
       <ul>
         <li>
           <strong>User Input and Generated Images:</strong> You are responsible
-          for the dream descriptions ("Prompts") you provide to the Platform.
-          The Platform will generate images based on these Prompts.
+          for the dream descriptions (&quot;Prompts&quot;) you provide to the
+          Platform. The Platform will generate images based on these Prompts.
         </li>
         <li>
           <strong>Sharing User Content:</strong> By posting dream images and
@@ -92,8 +92,8 @@ export default function TermOfService() {
           <ul>
             <li>
               Unlawful, harmful, threatening, abusive, harassing, defamatory,
-              libelous, invasive of another's privacy, or racially, ethnically
-              or otherwise objectionable.
+              libelous, invasive of another&apos;s privacy, or racially,
+              ethnically or otherwise objectionable.
             </li>
             <li>
               Hate speech or promotes discrimination based on race, ethnicity,
@@ -227,12 +227,13 @@ export default function TermOfService() {
             Content, and we retain ownership of these generated images. We grant
             you a non-exclusive, personal, non-commercial license to use,
             display, and share the images you generate on the Platform for your
-            personal enjoyment and within the Platform's intended functionality.
-            For any commercial or broader usage beyond personal enjoyment and
-            Platform sharing, please contact us for licensing options.{' '}
+            personal enjoyment and within the Platform&apos;s intended
+            functionality. For any commercial or broader usage beyond personal
+            enjoyment and Platform sharing, please contact us for licensing
+            options.{' '}
             <strong>
-              [Legal Review Needed: Define scope of "personal, non-commercial
-              use" clearly.]
+              [Legal Review Needed: Define scope of &quot;personal,
+              non-commercial use&quot; clearly.]
             </strong>
           </p>
           <p>
@@ -252,8 +253,8 @@ export default function TermOfService() {
           on the Platform and in connection with operating and promoting the
           Platform. This license is necessary for us to provide the services and
           is not intended to claim ownership of your creative input or generated
-          images beyond the terms described above in "Generated Image Copyright
-          and Usage."
+          images beyond the terms described above in &quot;Generated Image
+          Copyright and Usage.&quot;
         </li>
         <li>
           <strong>DMCA/Copyright Infringement Policy:</strong> We respect the
@@ -371,9 +372,9 @@ export default function TermOfService() {
         You agree to indemnify, defend, and hold harmless us and our officers,
         directors, employees, and agents, from and against any and all claims,
         liabilities, damages, losses, and expenses, including reasonable
-        attorneys' fees and costs, arising out of or in any way connected with
-        (a) your access to or use of the Platform; (b) your User Content; (c)
-        your breach or violation of these Terms; or (d) your infringement or
+        attorneys&apos; fees and costs, arising out of or in any way connected
+        with (a) your access to or use of the Platform; (b) your User Content;
+        (c) your breach or violation of these Terms; or (d) your infringement or
         violation of any third-party rights.
       </p>
 
