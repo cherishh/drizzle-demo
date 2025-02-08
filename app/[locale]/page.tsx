@@ -24,7 +24,10 @@ export default function Home() {
         <Link href='/about'>{t('about')}</Link>
         <Link href='/dashboard'>dashboard</Link>
       </nav>
-      <div className='flex-1'>hero todo</div>
+      <div className='flex-1'>
+        <p>this is a test app for nextjs 15, RSC, drizzle, neon, oauth, etc.</p>
+        <p>i&apos;m trying to glue all these features together.</p>
+      </div>
       <footer className='flex flex-row items-center justify-center gap-2 text-sm'>
         <Link href='/term-of-service'>Term Of Service</Link>
         <span className='text-muted-foreground'>·</span>
