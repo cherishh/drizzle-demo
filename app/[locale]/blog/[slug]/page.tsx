@@ -10,25 +10,12 @@ async function BlogPage({ params }: { params: Promise<{ slug: string }> }) {
     <div>
       <h1>Blog Page</h1>
       <article>
-        <h2>title</h2>
+        <h2>title: {slug}</h2>
         <p>content</p>
+        <p>todo</p>
       </article>
     </div>
   );
-
-  // return (
-  //   <div>
-  //     <h1>Blog Page</h1>
-  //     <article>
-  //       <h2>{title}</h2>
-  //       <p>{content}</p>
-  //     </article>
-  //     <div>
-  //       <span>like</span>
-  //       <span>comment</span>
-  //     </div>
-  //   </div>
-  // );
 }
 
 export default BlogPage;
