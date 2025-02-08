@@ -123,6 +123,10 @@ export default function FeedbackPage() {
           </Button>
         </form>
       </Form>
+      <p>
+        NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY:{' '}
+        {process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+      </p>
     </div>
   );
 }
