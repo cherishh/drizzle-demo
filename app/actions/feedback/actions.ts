@@ -39,6 +39,26 @@ export async function submitFeedback(
   }
 }
 
+export async function submitForm(formData: FormData) {
+  const content = formData.get('content')?.toString() || '';
+  const email = formData.get('email')?.toString() || '';
+
+  if (!content || !email) {
+    return { error: '请填写所有必填字段', success: false };
+  }
+
+  try {
+    await db.insert(feedback).values({
+      content,
+      email,
+      createdAt: new Date(),
+    });
+    return { error: '', success: true };
+  } catch (error) {
+    return { error: `提交失败，请稍后重试: ${error}`, success: false };
+  }
+}
+
 export async function incrementLikes(id: number) {
   try {
     await db

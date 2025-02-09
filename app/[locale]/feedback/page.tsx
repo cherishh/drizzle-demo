@@ -4,8 +4,8 @@ import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useActionState, useEffect } from 'react';
-import { submitFeedback } from '../../actions/feedback/actions';
+import { useTransition } from 'react';
+import { submitForm } from '../../actions/feedback/actions';
 import { Button } from '@/components/ui/button';
 import {
   Form,
@@ -18,26 +18,14 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { createFeedbackFormSchema, type FeedbackFormValues } from './schema';
-import { useTransition } from 'react';
-
-// 初始状态
-const initialState = {
-  error: '',
-  success: false,
-};
 
 export default function FeedbackPage() {
   const t = useTranslations('feedback');
-  const [state, formAction, pending] = useActionState(
-    submitFeedback,
-    initialState
-  );
   const [isPending, startTransition] = useTransition();
 
   const form = useForm<FeedbackFormValues>({
     resolver: zodResolver(
       createFeedbackFormSchema((key) => {
-        // 由于 t 只能访问 feedback 命名空间，我们需要移除前缀
         const validationKey = key.replace('feedback.', '');
         return t(validationKey);
       })
@@ -49,37 +37,29 @@ export default function FeedbackPage() {
   });
 
   async function onSubmit(data: FeedbackFormValues) {
-    startTransition(() => {
-      const formData = new FormData();
-      formData.append('email', data.email);
-      formData.append('content', data.content);
-      formAction(formData);
-      form.reset();
+    startTransition(async () => {
+      try {
+        const formData = new FormData();
+        formData.append('email', data.email);
+        formData.append('content', data.content);
+
+        const result = await submitForm(formData);
+        if (result.success) {
+          form.reset();
+          toast.success('success');
+        } else {
+          toast.error(result.error);
+        }
+      } catch (err) {
+        toast.error(err instanceof Error ? err.message : '提交失败');
+      }
     });
   }
-
-  const isLoading = pending || isPending;
-
-  useEffect(() => {
-    if (state.success) {
-      state.success = false;
-      toast.success('success');
-    }
-  }, [state]);
 
   return (
     <div className='mx-auto max-w-2xl p-4'>
       <h1 className='mb-6 text-2xl font-bold'>{t('title')}</h1>
 
-      {state.error && (
-        <div
-          className={`mb-4 rounded p-4 ${state.success ? 'bg-green-100' : 'bg-red-100'}`}
-        >
-          {state.error}
-        </div>
-      )}
-
-      {/* 这里应该是有问题的。要么使用 useForm,要么使用原生 form+useActionState */}
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
           <FormField
@@ -94,7 +74,7 @@ export default function FeedbackPage() {
                   <Input
                     placeholder={t('email_placeholder')}
                     {...field}
-                    disabled={isLoading}
+                    disabled={isPending}
                   />
                 </FormControl>
                 <FormMessage />
@@ -115,7 +95,7 @@ export default function FeedbackPage() {
                     placeholder={t('message_placeholder')}
                     rows={4}
                     {...field}
-                    disabled={isLoading}
+                    disabled={isPending}
                   />
                 </FormControl>
                 <FormMessage />
@@ -123,8 +103,8 @@ export default function FeedbackPage() {
             )}
           />
 
-          <Button type='submit' disabled={isLoading}>
-            {isLoading ? t('submitting') : t('submit')}
+          <Button type='submit' disabled={isPending}>
+            {isPending ? t('submitting') : t('submit')}
           </Button>
         </form>
       </Form>
