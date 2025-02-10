@@ -24,7 +24,6 @@ export default function Home() {
       <div className='mt-8 flex-1'>
         <p>this is a test app for nextjs 15, RSC, drizzle, neon, oauth, etc.</p>
         <p>I&apos;m trying to glue all these features together.</p>
-        <p>should be easy but experiencing some issues with auth.</p>
       </div>
       <footer className='flex flex-row items-center justify-center gap-2 text-sm'>
         <Link href='/term-of-service'>Term Of Service</Link>
