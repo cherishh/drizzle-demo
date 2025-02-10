@@ -18,8 +18,6 @@ this is a test app for nextjs 15, RSC, drizzle, neon, oauth, etc.
 - [ ] sitemap
 
 
-
-
 ## further actions(maybe)
 - add cache/redis
 
