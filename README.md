@@ -12,7 +12,8 @@ this is a test app for nextjs 15, RSC, drizzle, neon, oauth, etc.
 - [x] setup domain/SSL related
 - [x] add auth/clerk
 - [x] setup CI
-- [ ] add payload/CMS
+- [ ] ~~add payload/CMS(deprecated)~~
+- [x] add notion/blog
 - [ ] add analytics/posthog
 - [ ] add logging/sentry
 - [ ] sitemap

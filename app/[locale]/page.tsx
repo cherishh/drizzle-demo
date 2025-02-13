@@ -17,7 +17,7 @@ export default function Home() {
           {t('detail')}
         </Link>
         <Link href='/image-test'>{t('imageTest')}</Link>
-        <Link href='/blog/how-to-use-drizzle-with-nextjs-15'>{t('blog')}</Link>
+        <Link href='/blog'>{t('blog')}</Link>
         <Link href='/todo'>({t('todo')})</Link>
         <Link href='/dashboard'>(Dashboard)</Link>
       </nav>
