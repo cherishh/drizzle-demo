@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 // import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
+import { useTheme } from 'next-themes';
 import {
   type NotionComponents,
   NotionRenderer as OriginalRenderer,
@@ -48,6 +49,8 @@ export default function NotionRenderer({
   data,
   idToSlug = {},
 }: NotionRendererProps) {
+  const { theme } = useTheme();
+
   const components = React.useMemo<Partial<NotionComponents>>(
     () => ({
       nextLegacyImage: Image,
@@ -66,6 +69,7 @@ export default function NotionRenderer({
 
   return (
     <OriginalRenderer
+      darkMode={theme === 'dark'}
       recordMap={data}
       fullPage={true}
       components={components}
