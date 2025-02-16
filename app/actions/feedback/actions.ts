@@ -4,6 +4,9 @@ import { revalidatePath } from 'next/cache';
 import { db } from '@/lib/db';
 import { feedback } from '@/lib/db/schema';
 import { eq, sql } from 'drizzle-orm';
+import { ratelimit } from '@/app/api/ratelimit';
+import { auth } from '@clerk/nextjs/server';
+import posthog from 'posthog-js';
 
 // 定义初始状态类型
 type initialState = {
@@ -13,16 +16,32 @@ type initialState = {
 
 export type FeedbackState = initialState;
 
+// NOTE deprecated, use submitForm instead
 export async function submitFeedback(
   prevState: FeedbackState,
   formData: FormData
 ) {
+  const user = await auth();
+  if (!user.userId) {
+    return { error: '请先登录', success: false };
+  }
+
   // 这里不需要再 use server, 单独 file 中顶层使用 use server，下面所有 export async function 均自动成为 server actions
   const content = formData.get('content')?.toString() || '';
   const email = formData.get('email')?.toString() || '';
 
   if (!content || !email) {
     return { error: '请填写所有必填字段', success: false };
+  }
+
+  const identifier = user.userId;
+  console.log('identifier', identifier);
+  const { success } = await ratelimit.limit(identifier);
+  if (!success) {
+    return {
+      error: 'ratelimited: 提交过于频繁，请稍后再试',
+      success: false,
+    };
   }
 
   try {
@@ -40,11 +59,29 @@ export async function submitFeedback(
 }
 
 export async function submitForm(formData: FormData) {
+  const user = await auth();
+  if (!user.userId) {
+    return { error: '请先登录', success: false };
+  }
+
   const content = formData.get('content')?.toString() || '';
   const email = formData.get('email')?.toString() || '';
 
   if (!content || !email) {
     return { error: '请填写所有必填字段', success: false };
+  }
+
+  const identifier = user.userId;
+  console.log('identifier', identifier);
+  const { success } = await ratelimit.limit(identifier);
+  if (!success) {
+    posthog.capture('ratelimited', {
+      email,
+    });
+    return {
+      error: 'ratelimited: 提交过于频繁，请稍后再试',
+      success: false,
+    };
   }
 
   try {
