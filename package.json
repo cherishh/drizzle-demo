@@ -45,6 +45,7 @@
     "notion-types": "^7.1.6",
     "notion-utils": "^7.1.6",
     "plaiceholder": "^3.0.0",
+    "posthog-js": "^1.217.5",
     "prismjs": "^1.29.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

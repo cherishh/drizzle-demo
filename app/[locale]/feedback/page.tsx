@@ -18,6 +18,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { createFeedbackFormSchema, type FeedbackFormValues } from './schema';
+import posthog from 'posthog-js';
 
 export default function FeedbackPage() {
   const t = useTranslations('feedback');
@@ -42,6 +43,10 @@ export default function FeedbackPage() {
         const formData = new FormData();
         formData.append('email', data.email);
         formData.append('content', data.content);
+        posthog.capture('feedback', {
+          email: data.email,
+          content: data.content,
+        });
 
         const result = await submitForm(formData);
         if (result.success) {

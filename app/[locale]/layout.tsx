@@ -8,6 +8,7 @@ import { routing } from '@/i18n/routing';
 import { Geist, Geist_Mono } from 'next/font/google';
 import '../globals.css';
 import { Header } from '@/components/shared/header';
+import { PostHogProvider } from '@/app/(analytics)/ph-provider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -41,17 +42,19 @@ export default async function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} flex h-full flex-col antialiased`}
         >
-          <ThemeProvider
-            attribute='class'
-            defaultTheme='system'
-            enableSystem
-            disableTransitionOnChange // 如果不禁止，在 dark 模式下刷新会有一个从白到黑的flash
-          >
-            <NextIntlClientProvider messages={messages}>
-              <Header />
-              {children}
-            </NextIntlClientProvider>
-          </ThemeProvider>
+          <PostHogProvider>
+            <ThemeProvider
+              attribute='class'
+              defaultTheme='system'
+              enableSystem
+              disableTransitionOnChange // 如果不禁止，在 dark 模式下刷新会有一个从白到黑的flash
+            >
+              <NextIntlClientProvider messages={messages}>
+                <Header />
+                {children}
+              </NextIntlClientProvider>
+            </ThemeProvider>
+          </PostHogProvider>
         </body>
       </html>
     </ClerkProvider>
