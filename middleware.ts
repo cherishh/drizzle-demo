@@ -24,15 +24,13 @@ export default clerkMiddleware(async (auth, request: NextRequest) => {
 
 export const config = {
   matcher: [
-    // API 路由
-    '/api/:path*',
-    '/trpc/:path*',
-
     // next-intl 国际化匹配规则
     '/',
     '/(zh|en)/:path*',
 
-    // Skip Next.js internals and all static files, unless found in search params
-    '/((?!_next|api|trpc|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
+    // 排除 ingest 路径，同时排除其他系统路径。ingest 是为了 posthog rewrites手动添加的，其他部分 clerk 添加。
+    '/((?!ingest|_next|api|trpc|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
+    // Always run for API routes
+    '/(api|trpc)(.*)',
   ],
 };
