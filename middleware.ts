@@ -28,8 +28,10 @@ export const config = {
     '/',
     '/(zh|en)/:path*',
 
-    // 排除 ingest 路径，同时排除其他系统路径。ingest 是为了 posthog rewrites手动添加的，其他部分 clerk 添加。
-    '/((?!ingest|_next|api|trpc|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
+    // based on clerk
+    // 排除 ingest 路径。ingest 是为了 posthog rewrites手动添加的，其他部分 clerk 添加。
+    // 排除 xml 路径。sitemap 不需要 locale
+    '/((?!ingest|_next|api|trpc|[^?]*\\.(?:html?|xml|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
     // Always run for API routes
     '/(api|trpc)(.*)',
   ],

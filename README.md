@@ -1,5 +1,6 @@
 # Demo
 this is a test app for nextjs 15, RSC, drizzle, neon, oauth, etc.
+a minimal saas framework putting all modern features together.
 
 ## todo
 - [x] add drizzle
@@ -17,14 +18,15 @@ this is a test app for nextjs 15, RSC, drizzle, neon, oauth, etc.
 - [x] add analytics/posthog
 - [x] add redis/upstash rate limit
 - [ ] ~~add logging/sentry~~
-- [ ] sitemap
+- [x] sitemap
 
 
 ## further actions(maybe)
-- add cache/redis
 - add stripe/payment
+- add cache/redis
+- add logging/sentry
 
-g
+
 ## domains
 - https://tuxihub.com
 - https://drizzle-demo.vercel.app
