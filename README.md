@@ -1,6 +1,7 @@
-# Demo
-this is a test app for nextjs 15, RSC, drizzle, neon, oauth, etc.
-a minimal saas framework putting all modern features together.
+# minimal saas framework
+this is a POC app for nextjs 15, RSC, drizzle, neon(severless db), auth, cms, analytics, etc.
+
+a minimal saas framework putting all modern pieces together.
 
 ## todo
 - [x] add drizzle
