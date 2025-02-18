@@ -29,6 +29,7 @@ a minimal saas framework putting all modern pieces together.
 - add stripe/payment
 resources:
   - https://github.com/hua1995116/indiehackers-steps
+  - https://mp.weixin.qq.com/s/y_XRFa8pzkgV-GqttSotqw
   - https://github.com/t3dotgg/stripe-recommendations
   - https://www.youtube.com/watch?v=ag7HXbgJtuk
 
