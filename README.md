@@ -43,6 +43,7 @@ resources:
     - https://sendgrid.com/en-us
 - custom support/crisp
 - find an actual image service
+- user comment/disqus
 - add cache/redis
 - tanstack query w/ trpc(or even a separate backend?)
 - testing/unit test
