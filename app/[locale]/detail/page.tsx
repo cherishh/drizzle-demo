@@ -3,9 +3,11 @@ import { Suspense } from 'react';
 export const revalidate = 0;
 
 async function getRandomFact() {
-  const randomFact = await fetch('https://uselessfacts.jsph.pl/random.json?language=en')
-    .then(res => res.json())
-    .then(data => data.text);
+  const randomFact = await fetch(
+    'https://uselessfacts.jsph.pl/random.json?language=en'
+  )
+    .then((res) => res.json())
+    .then((data) => data.text);
   return randomFact;
 }
 
