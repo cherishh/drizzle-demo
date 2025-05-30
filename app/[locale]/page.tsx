@@ -110,7 +110,7 @@ export default function Home() {
                     </li>
                     <li className='flex items-center gap-2'>
                       <span className='text-gray-400'>✅</span>
-                      <span>deploy to vercel & cloudflare</span>
+                      <span>deploy to vercel & fly.io</span>
                     </li>
                     <li className='flex items-center gap-2'>
                       <span className='text-green-500'>✅</span>
