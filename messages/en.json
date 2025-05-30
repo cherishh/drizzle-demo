@@ -1,12 +1,14 @@
 {
   "home": {
+    "home": "Home",
     "title": "Test",
     "feedback": "Feedback",
     "feedbackList": "Feedback List",
     "detail": "Random Facts",
     "imageTest": "Image Test",
-    "todo": "Todo App",
-    "blog": "Blog"
+    "blog": "Blog",
+    "dashboard": "Dashboard",
+    "main_content": "This is a MVP, for showing how to build a modern web app with modern techstack."
   },
   "feedback": {
     "list": {

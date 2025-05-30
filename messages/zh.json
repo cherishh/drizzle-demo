@@ -1,12 +1,14 @@
 {
   "home": {
+    "home": "首页",
     "title": "测试",
     "feedback": "反馈",
     "feedbackList": "反馈列表",
     "detail": "冷知识",
     "imageTest": "图片测试",
-    "todo": "待办事项",
-    "blog": "博客"
+    "blog": "博客",
+    "dashboard": "仪表盘",
+    "main_content": "这是一个MVP，用于展示如何使用现代技术栈构建一个现代化的Web全栈应用。"
   },
   "feedback": {
     "list": {
