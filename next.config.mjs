@@ -19,9 +19,6 @@ const nextConfig = {
       {
         hostname: 'pub-ce42191b7e6f487fa1077cb938dc35a3.r2.dev',
       },
-      {
-        hostname: 'images.unsplash.com',
-      },
     ],
   },
   async headers() {
